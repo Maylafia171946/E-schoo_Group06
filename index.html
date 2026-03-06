@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-school Group - L'informatique au service de l'éducation</title>
+    <meta name="description" content="E-School Group accompagne les écoles avec des solutions numériques, des formations et la maintenance informatique.">
+    <link rel="icon" type="image/webp" href="images/logo%20e-school%20group.webp">
+    <link rel="apple-touch-icon" href="images/logo%20e-school%20group.webp">
+    <meta property="og:title" content="E-school Group">
+    <meta property="og:description" content="L'informatique au service de l'éducation.">
+    <meta property="og:image" content="images/logo%20e-school%20group.webp">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="images/logo%20e-school%20group.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "E-School Group",
+      "logo": "images/logo e-school group.webp",
+      "sameAs": [
+        "https://www.facebook.com/ESCHOOL.GROUP.1",
+        "https://www.instagram.com/eschool.group",
+        "https://www.linkedin.com/in/e-school-group-60009b300",
+        "https://www.youtube.com/@E-SCHOOLGROUP",
+        "https://www.tiktok.com/@eschoolgroup"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="app">
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <!-- Barre d'informations -->
+    <div class="topbar">
+        <div class="container topbar-content">
+            <div class="topbar-info">
+                <a href="tel:+221774643508">+221 77 464 35 08</a>
+                <a href="tel:+221775870728">+221 77 587 07 28</a>
+                <a href="mailto:eschoolgroup.1@gmail.com">eschoolgroup.1@gmail.com</a>
+            </div>
+            <div class="topbar-social">
+                <a href="https://www.facebook.com/ESCHOOL.GROUP.1" target="_blank" rel="noopener">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/eschool.group" target="_blank" rel="noopener">
+                    <img src="images/Instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/e-school-group-60009b300" target="_blank" rel="noopener">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.youtube.com/@E-SCHOOLGROUP" target="_blank" rel="noopener">
+                    <img src="images/youtube.png" alt="YouTube">
+                </a>
+                <a href="https://wa.me/221774643508" target="_blank" rel="noopener">
+                    <img src="images/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.tiktok.com/@eschoolgroup" target="_blank" rel="noopener">
+                    <img src="images/tiktok.png" alt="TikTok">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- En-tête avec navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#home" @click.prevent="scrollTo('home')">
+                    <img src="images/logo%20e-school%20group.webp" alt="E-school Group" loading="eager">
+                    <span>E-school Group</span>
+                </a>
+            </div>
+            <nav>
+                <ul :class="{ show: isMenuOpen }">
+                    <li><a href="#home" @click.prevent="scrollTo('home')">Accueil</a></li>
+                    <li><a href="#services" @click.prevent="scrollTo('services')">Services</a></li>
+                    <li><a href="#avantages" @click.prevent="scrollTo('avantages')">Avantages</a></li>
+                    <li><a href="#temoignages" @click.prevent="scrollTo('temoignages')">Témoignages</a></li>
+                    <li><a href="#bibliotheque" @click.prevent="scrollTo('bibliotheque')">Bibliothèque</a></li>
+                    <li><a href="#signaler-panne" @click.prevent="scrollTo('signaler-panne')">Contact</a></li>
+                </ul>
+                <button class="menu-toggle" @click="toggleMenu">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Accueil -->
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text reveal">
+                    <div class="hero-badges">
+                        <span>Éducation digitale</span>
+                        <span>Support 24/7</span>
+                        <span>10+ ans d'expérience</span>
+                    </div>
+                    <h1>L'informatique au service de l'éducation</h1>
+                    <p>Transformez l'apprentissage avec des solutions modernes : salles virtuelles, formations certifiantes et maintenance proactive.</p>
+                    <div class="hero-actions">
+                        <a href="#services" class="btn" @click.prevent="scrollTo('services')">Découvrir nos services</a>
+                        <a href="#" class="btn btn-outline" @click.prevent="openQuoteModal">Demander un devis</a>
+                        <a href="#signaler-panne" class="btn" @click.prevent="scrollTo('signaler-panne')">Signalez une panne</a>
+                    </div>
+                </div>
+                <div class="hero-card reveal">
+                    <h3>Disponibilité & fiabilité</h3>
+                    <p>Nous accompagnons les établissements de la stratégie digitale à l'assistance terrain.</p>
+                    <div class="hero-stats">
+                        <div>
+                            <strong>500</strong>
+                            <span>établissements équipés</span>
+                        </div>
+                        <div>
+                            <strong>98%</strong>
+                            <span>satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mot du directeur -->
+        <section id="director" class="director-section reveal">
+            <div class="container">
+                <div class="director-content">
+                    <img src="images/Dg.svg" alt="Directeur d'E-school Group" loading="lazy">
+                    <div class="director-message director-card">
+                        <h2>Mot du Directeur</h2>
+                        <p>Dans un monde en pleine mutation numérique, l’éducation ne peut rester en marge des évolutions technologiques. C’est avec cette conviction qu’est né E-School Group, il y a plus de dix-sept ans, avec une ambition claire : mettre l’informatique au service de l’éducation.</p>
+                        <p>Depuis notre création, nous accompagnons les écoles dans l’installation de salles informatiques pédagogiques, la formation des élèves et l’encadrement des enseignants, afin de favoriser un apprentissage moderne, inclusif et adapté aux réalités de notre pays. Notre approche repose sur la proximité, la qualité pédagogique et l’innovation continue.</p>
+                        <p>Aujourd’hui, E-School Group travaille aux côtés de nombreuses écoles partenaires à travers le Sénégal, avec la ferme volonté de contribuer à la construction d’une jeunesse compétente, responsable et préparée aux défis du numérique.</p>
+                        <p>Je remercie l’ensemble de nos partenaires, directeurs d’écoles, enseignants et parents pour leur confiance renouvelée, ainsi que notre équipe pour son engagement quotidien. Ensemble, nous bâtissons une école tournée vers l’avenir.</p>
+                        <p class="director-signature">Mamadou Lamine Camara<br>Directeur Général<br>E-School Group</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo de groupe du personnel -->
+        <section id="staff" class="staff-section reveal">
+            <div class="container">
+                <h2>Notre Équipe</h2>
+                <img src="images/personnel.webp" alt="Équipe d'E-school Group" class="staff-photo" loading="lazy">
+            </div>
+        </section>
+
+        <!-- Services proposés -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Nos Services</h2>
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <img src="images/installation%20salles.webp" alt="Installation de salles virtuelles" loading="lazy">
+                        <h3>Équipement de salles informatiques pédagogiques</h3>
+                        <ul class="service-list">
+                            <li>Installation d’ordinateurs dans les écoles partenaires</li>
+                            <li>Mise en place de salles informatiques pour les élèves</li>
+                            <li>Configuration du matériel et du réseau informatique</li>
+                        </ul>
+                    </div>
+                    <div class="service-card reveal">
+                        <img src="images/formation.webp" alt="Formations numériques" loading="lazy">
+                        <h3>Formation des élèves en informatique</h3>
+                        <ul class="service-list">
+                            <li>Cours d’informatique dans les écoles</li>
+                            <li>Initiation aux outils numériques (ordinateur, logiciels pédagogiques)</li>
+                            <li>Formation progressive : bureautique, programmation, réseaux, etc.</li>
+                        </ul>
+                    </div>
+                    <div class="service-card reveal">
+                        <img src="images/maintenance.webp" alt="Maintenance informatique" loading="lazy">
+                        <h3>Maintenance et gestion du parc informatique des écoles</h3>
+                        <ul class="service-list">
+                            <li>Maintenance régulière des ordinateurs</li>
+                            <li>Réparation et suivi technique du matériel</li>
+                            <li>Assistance informatique pour les établissements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Avantages -->
+        <section id="avantages" class="advantages-section">
+            <div class="container">
+                <h2>Pourquoi nous choisir</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card reveal">
+                        <h3>Accompagnement complet</h3>
+                        <p>Audit, déploiement, formation et support pour une transition fluide.</p>
+                    </div>
+                    <div class="advantage-card reveal">
+                        <h3>Solutions sécurisées</h3>
+                        <p>Protection des données, conformité et bonnes pratiques intégrées.</p>
+                    </div>
+                    <div class="advantage-card reveal">
+                        <h3>Suivi personnalisé</h3>
+                        <p>Un interlocuteur dédié et des rapports de performance clairs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Chiffres clés -->
+        <section id="chiffres" class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card reveal">
+                        <strong data-count="500" data-suffix="">500</strong>
+                        <span>Établissements équipés</span>
+                    </div>
+                    <div class="stat-card reveal">
+                        <strong data-count="500000" data-suffix="">500 000</strong>
+                        <span>Apprenants formés</span>
+                    </div>
+                    <div class="stat-card reveal">
+                        <strong data-count="24" data-suffix="H/24">24H/24</strong>
+                        <span>Assistance technique</span>
+                    </div>
+                    <div class="stat-card reveal">
+                        <strong data-count="98" data-suffix="%">98%</strong>
+                        <span>Taux de satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Programme -->
+        <section id="programme" class="programme-section">
+            <div class="container">
+                <h2>Nos 6 Programmes de Formation</h2>
+                <div class="programmes-grid">
+                    <div class="programme-card reveal">
+                        <span class="programme-icon">01</span>
+                        <h3>Informatique Générale</h3>
+                        <ul class="programme-list">
+                            <li>Découverte de l’ordinateur</li>
+                            <li>Utilisation du clavier et de la souris</li>
+                            <li>Gestion des fichiers et dossiers</li>
+                            <li>Introduction aux logiciels essentiels</li>
+                        </ul>
+                        <p class="programme-objective"><strong>Objectif :</strong> permettre aux élèves de maîtriser les outils numériques dès le début de leur parcours scolaire.</p>
+                        <a href="#" @click.prevent="openQuoteModal" class="programme-link">En savoir plus</a>
+                    </div>
+                    <div class="programme-card reveal">
+                        <span class="programme-icon">02</span>
+                        <h3>Bureautique et Productivité</h3>
+                        <ul class="programme-list">
+                            <li>Traitement de texte</li>
+                            <li>Tableurs</li>
+                            <li>Présentations numériques</li>
+                        </ul>
+                        <p class="programme-objective"><strong>Objectif :</strong> développer la capacité des élèves à produire des documents scolaires et professionnels.</p>
+                        <a href="#" @click.prevent="openQuoteModal" class="programme-link">En savoir plus</a>
+                    </div>
+                    <div class="programme-card reveal">
+                        <span class="programme-icon">03</span>
+                        <h3>Maintenance Informatique de Base</h3>
+                        <ul class="programme-list">
+                            <li>Identification des composants d’un ordinateur</li>
+                            <li>Maintenance préventive</li>
+                            <li>Résolution des pannes simples</li>
+                        </ul>
+                        <p class="programme-objective"><strong>Objectif :</strong> initier les élèves aux métiers techniques de l’informatique.</p>
+                        <a href="#" @click.prevent="openQuoteModal" class="programme-link">En savoir plus</a>
+                    </div>
+                    <div class="programme-card reveal">
+                        <span class="programme-icon">04</span>
+                        <h3>Logiciels Pédagogiques Éducatifs</h3>
+                        <ul class="programme-list">
+                            <li>Mathématiques</li>
+                            <li>Sciences</li>
+                            <li>Langues</li>
+                        </ul>
+                        <p class="programme-objective"><strong>Objectif :</strong> améliorer la compréhension des cours grâce aux outils numériques.</p>
+                        <a href="#" @click.prevent="openQuoteModal" class="programme-link">En savoir plus</a>
+                    </div>
+                    <div class="programme-card reveal">
+                        <span class="programme-icon">05</span>
+                        <h3>Initiation à la Programmation</h3>
+                        <ul class="programme-list">
+                            <li>Logique algorithmique</li>
+                            <li>Premiers langages adaptés aux jeunes</li>
+                            <li>Création de petits projets numériques</li>
+                        </ul>
+                        <p class="programme-objective"><strong>Objectif :</strong> développer la pensée logique et la créativité numérique.</p>
+                        <a href="#" @click.prevent="openQuoteModal" class="programme-link">En savoir plus</a>
+                    </div>
+                    <div class="programme-card reveal">
+                        <span class="programme-icon">06</span>
+                        <h3>Réseaux et Télécommunications</h3>
+                        <ul class="programme-list">
+                            <li>Internet et communication numérique</li>
+                            <li>Principes des réseaux locaux</li>
+                            <li>Sensibilisation aux métiers des télécommunications</li>
+                        </ul>
+                        <p class="programme-objective"><strong>Objectif :</strong> préparer les apprenants aux technologies du futur.</p>
+                        <a href="#" @click.prevent="openQuoteModal" class="programme-link">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Bibliothèque -->
+        <section id="bibliotheque" class="bibliotheque-section">
+            <div class="container">
+                <h2>Bibliothèque</h2>
+                <div class="media-zones">
+                    <div class="media-zone reveal">
+                        <div class="media-zone-header">
+                            <h3>Vidéos</h3>
+                            <p>Découvrez nos réalisations et témoignages en vidéo.</p>
+                        </div>
+                        <div class="carousel">
+                            <button class="carousel-btn prev" @click="scrollCarousel('videos-carousel', -1)" aria-label="Vidéo précédente">❮</button>
+                            <div id="videos-carousel" class="carousel-track">
+                                <div class="media-card video-card" v-for="(video, index) in videoLibrary" :key="video.src">
+                                    <div class="video-embed">
+                                        <iframe width="560" height="315" :src="video.src" :title="video.title" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <span>{{ video.title }}</span>
+                                </div>
+                            </div>
+                            <button class="carousel-btn next" @click="scrollCarousel('videos-carousel', 1)" aria-label="Vidéo suivante">❯</button>
+                        </div>
+                    </div>
+                    <div class="media-zone reveal">
+                        <div class="media-zone-header">
+                            <h3>Photos</h3>
+                            <p>Moments forts de formations, ateliers et partenariats.</p>
+                        </div>
+                        <div class="carousel">
+                            <button class="carousel-btn prev" @click="scrollCarousel('photos-carousel', -1)" aria-label="Photo précédente">❮</button>
+                            <div id="photos-carousel" class="carousel-track">
+                                <div class="media-card" v-for="(photo, index) in photoLibrary" :key="photo">
+                                    <img :src="photo" :alt="'Photo bibliothèque ' + (index + 1)" loading="lazy" @error="handlePhotoError(index)">
+                                    <span>Photo {{ index + 1 }}</span>
+                                </div>
+                            </div>
+                            <button class="carousel-btn next" @click="scrollCarousel('photos-carousel', 1)" aria-label="Photo suivante">❯</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Témoignages -->
+        <section id="temoignages" class="testimonials-section">
+            <div class="container">
+                <h2>Ils nous font confiance</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal">
+                        <p>"Des équipes réactives et une mise en place rapide. Nos enseignants sont ravis."</p>
+                        <span>— Mme Diallo, Directrice</span>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <p>"La maintenance préventive a réduit nos pannes de manière significative."</p>
+                        <span>— M. Traoré, Responsable IT</span>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <p>"Les formations sont claires et adaptées à nos besoins."</p>
+                        <span>— Mme Ndiaye, Coordinatrice</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Partenariat -->
+        <section id="partenariat" class="partenariat-section">
+            <div class="container">
+                <h2>Nos Partenariats</h2>
+                <div class="partners-row">
+                    <div class="partner-card reveal">
+                        <img src="images/imagecapep.webp" alt="CAPEP" loading="lazy">
+                        <p>CAPEP (Conseil des Acteurs et Partenaires des Ecoles Privées)</p>
+                    </div>
+                    <div class="partner-card reveal">
+                        <img src="images/logocnefaas.webp" alt="CNEFAAS" loading="lazy">
+                        <p>CNEFAAS (Conseil National des Ecoles Franco Arabes Autorisées du Sénégal)</p>
+                    </div>
+                    <div class="partner-card reveal">
+                        <img src="images/logomen.webp" alt="IA et IEF" loading="lazy">
+                        <p>IA et IEF</p>
+                        <span class="partner-subtitle">Inspection d'Académie; Inspection de l'Education et de la Formation</span>
+                    </div>
+                    <div class="partner-card reveal">
+                        <img src="images/imagefnep.webp" alt="FNEP" loading="lazy">
+                        <p>FNEP (Forum de National de l'Enseignement Privé)</p>
+                    </div>
+                </div>
+
+                <div class="school-partners">
+                    <h3>Partenaires écoles</h3>
+                    <div class="school-partners-row">
+                        <div class="school-partner-card reveal">
+                            <img src="images/partenaires/Daroul%20Imane.webp" alt="Daroul Imane" loading="lazy">
+                            <div class="school-partner-content">
+                                <h4>Daroul Imane</h4>
+                                <p class="school-partner-name">M. Sarr, Directeur des études</p>
+                                <p class="school-partner-quote">"Merci à E-School Group pour l’accompagnement et la qualité des installations."</p>
+                            </div>
+                        </div>
+                        <div class="school-partner-card reveal">
+                            <img src="images/partenaires/Daara-Aicha.webp" alt="Daara Aicha Oumil Mouminine" loading="lazy">
+                            <div class="school-partner-content">
+                                <h4>Daara Aicha Oumil Mouminine (Grand Yoff)</h4>
+                                <p class="school-partner-name">Madame Ndiaye, Directrice adjointe</p>
+                                <p class="school-partner-quote">"Des formations utiles et un suivi professionnel, nous sommes satisfaits."</p>
+                            </div>
+                        </div>
+                        <div class="school-partner-card reveal">
+                            <img src="images/partenaires/gska.webp" alt="Groupe Scolaire Keur Arame" loading="lazy">
+                            <div class="school-partner-content">
+                                <h4>Groupe Scolaire Keur Arame</h4>
+                                <p class="school-partner-name">M. Kébé</p>
+                                <p class="school-partner-quote">"Une équipe réactive et une vraie amélioration de nos pratiques."</p>
+                            </div>
+                        </div>
+                        <div class="school-partner-card reveal">
+                            <img src="images/partenaires/tskbadi%C3%A9nemai.webp" alt="Institut Tazawoudou Shikhar Keur Badiéne Mai" loading="lazy">
+                            <div class="school-partner-content">
+                                <h4>Institut Tazawoudou Shikhar Keur Badiéne Mai</h4>
+                                <p class="school-partner-name">Madame Mbacké</p>
+                                <p class="school-partner-quote">"Un partenariat solide qui valorise l’apprentissage numérique."</p>
+                            </div>
+                        </div>
+                        <div class="school-partner-card reveal">
+                            <img src="images/partenaires/institut%20international%20baye%20barhamou.svg" alt="Institut International Baye-Barhamou 2IB" loading="lazy">
+                            <div class="school-partner-content">
+                                <h4>INSTITUT INTERNATIONAL BAYE-BARHAMOU 2IB</h4>
+                                <p class="school-partner-name">M. Madiara Ndiaye, Déclarant responsable</p>
+                                <p class="school-partner-quote">"E-School Group accompagne les élèves sur leur programme scolaire avec l'informatique."</p>
+                            </div>
+                        </div>
+                        <div class="school-partner-card reveal">
+                            <img src="images/partenaires/Groupe%20scolaire%20Nanondiral.svg" alt="Groupe scolaire Nanondiral" loading="lazy">
+                            <div class="school-partner-content">
+                                <h4>Groupe scolaire Nanondiral</h4>
+                                <p class="school-partner-name">M. Dione</p>
+                                <p class="school-partner-quote">"J'apprécie vraiment le travail que fait E-School Group."</p>
+                            </div>
+                        </div>
+                        <div class="school-partner-card reveal">
+                            <img src="images/partenaires/njarin.svg" alt="Groupe Scolaire Njarin Franco Arabe Ndioloféne" loading="lazy">
+                            <div class="school-partner-content">
+                                <h4>Groupe Scolaire Njarin Franco Arabe Ndioloféne</h4>
+                                <p class="school-partner-name">Mme Déme Aminata LOUM</p>
+                                <p class="school-partner-quote">"E-School Group est une entreprise incontournable dans le domaine du numérique."</p>
+                            </div>
+                        </div>
+                        <div class="school-partner-card reveal">
+                            <img src="images/partenaires/kmal.svg" alt="Complexe Keur Mame Awa Lo" loading="lazy">
+                            <div class="school-partner-content">
+                                <h4>Complexe Keur Mame Awa Lo</h4>
+                                <p class="school-partner-name">El Hadji Falilou MBACKÈ</p>
+                                <p class="school-partner-quote">"E-School Group est un partenaire venu à son heure."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section TikTok -->
+        <section id="tiktok" class="tiktok-section">
+            <div class="container">
+                <h2>Suivez-nous sur TikTok</h2>
+                <div class="tiktok-card reveal">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@eschoolgroup" data-unique-id="eschoolgroup" data-embed-type="creator" style="max-width: 780px; min-width: 288px;">
+                        <section>
+                            <a target="_blank" href="https://www.tiktok.com/@eschoolgroup?refer=creator_embed">@eschoolgroup</a>
+                        </section>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section CTA -->
+        <section id="cta" class="cta-section">
+            <div class="container cta-card reveal">
+                <div>
+                    <h2>Prêt à moderniser votre établissement ?</h2>
+                    <p>Contactez-nous pour un audit gratuit et un plan d'accompagnement.</p>
+                </div>
+                <a href="#" class="btn" @click.prevent="openQuoteModal">Demander un devis</a>
+            </div>
+        </section>
+
+        <!-- Section Signalement de panne -->
+        <section id="signaler-panne" class="report-section">
+            <div class="container">
+                <div class="report-card reveal">
+                    <h2>Signaler une panne</h2>
+                    <p>Décrivez le problème rencontré, notre équipe vous contactera rapidement.</p>
+                    <form id="report-form" @submit.prevent="submitReport">
+                        <input type="text" name="etablissement" placeholder="Nom de l'établissement" v-model="report.etablissement" required>
+                        <input type="text" name="nom" placeholder="Votre nom" v-model="report.nom" required>
+                        <input type="email" name="email" placeholder="Votre email" v-model="report.email" required>
+                        <select name="categorie" v-model="report.categorie" required>
+                            <option value="" disabled>Type de panne</option>
+                            <option value="materiel">Matériel</option>
+                            <option value="logiciel">Logiciel</option>
+                            <option value="reseau">Réseau</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                        <textarea name="description" placeholder="Décrivez la panne" v-model="report.description" required></textarea>
+                        <p class="report-status" :class="reportStatusClass" aria-live="polite">{{ reportStatus }}</p>
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div v-if="showQuoteModal" class="quote-modal-overlay" @click.self="closeQuoteModal">
+            <div class="quote-modal">
+                <button class="quote-close" @click="closeQuoteModal" aria-label="Fermer">×</button>
+                <h2>Demander un devis</h2>
+                <p>Renseignez vos informations, nous vous répondrons rapidement.</p>
+                <form id="quote-form" @submit.prevent="submitQuote">
+                    <input type="text" v-model="quote.ecole" placeholder="Nom de l'école" required>
+                    <input type="text" v-model="quote.adresse" placeholder="Adresse" required>
+                    <input type="number" min="1" v-model="quote.eleves" placeholder="Nombre d'élèves" required>
+                    <select v-model="quote.salleDisponible" required>
+                        <option value="" disabled>Salle disponible pour l'informatique ?</option>
+                        <option value="Oui">Oui</option>
+                        <option value="Non">Non</option>
+                    </select>
+                    <p class="report-status" :class="quoteStatusClass" aria-live="polite">{{ quoteStatus }}</p>
+                    <button type="submit">Envoyer la demande</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <p>&copy; 2026 E-school Group. Tous droits réservés.</p>
+                    <p class="footer-note">L'informatique au service de l'éducation.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens utiles</h4>
+                    <a href="#home" @click.prevent="scrollTo('home')">Accueil</a>
+                    <a href="#programme" @click.prevent="scrollTo('programme')">Programmes</a>
+                    <a href="#bibliotheque" @click.prevent="scrollTo('bibliotheque')">Bibliothèque</a>
+                    <a href="#partenariat" @click.prevent="scrollTo('partenariat')">Partenariats</a>
+                    <a href="#" @click.prevent="openQuoteModal">Demander un devis</a>
+                    <a href="#signaler-panne" @click.prevent="scrollTo('signaler-panne')">Signaler une panne</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/ESCHOOL.GROUP.1" target="_blank" rel="noopener">
+                        <img src="images/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/eschool.group" target="_blank" rel="noopener">
+                        <img src="images/Instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/in/e-school-group-60009b300" target="_blank" rel="noopener">
+                        <img src="images/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.youtube.com/@E-SCHOOLGROUP" target="_blank" rel="noopener">
+                        <img src="images/youtube.png" alt="YouTube">
+                    </a>
+                    <a href="https://wa.me/221774643508" target="_blank" rel="noopener">
+                        <img src="images/whatsapp.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.tiktok.com/@eschoolgroup" target="_blank" rel="noopener">
+                        <img src="images/tiktok.png" alt="TikTok">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton WhatsApp flottant -->
+    <a href="https://wa.me/221775870728?text=Bienvenue%20%C3%A0%20E-school" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
+        <img src="images/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    </div>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
